@@ -1,0 +1,2760 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../server-properties/">
+      
+      
+        <link rel="next" href="../voice-rules/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Client settings - A.V.A.T.A.R</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h224V368c0-26.5 21.5-48 48-48h112V96c0-35.3-28.7-64-64-64H64zm384 320H336c-8.8 0-16 7.2-16 16v112l32-32 64-64 32-32z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm-40-176h24v-64h-24c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-80c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M480 32c0-12.9-7.8-24.6-19.8-29.6S434.5.2 425.3 9.3L381.7 53c-48 48-113.1 75-181 75H64c-35.3 0-64 28.7-64 64v96c0 35.3 28.7 64 64 64v128c0 17.7 14.3 32 32 32h64c17.7 0 32-14.3 32-32V352h8.7c67.9 0 133 27 181 75l43.6 43.6c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V300.4c18.6-8.8 32-32.5 32-60.4s-13.4-51.6-32-60.4V32zm-64 76.7v262.6C357.2 317.8 280.5 288 200.7 288H192v-96h8.7c79.8 0 156.5-29.8 215.3-83.3z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7l233.4-233.3c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm-86.2-346.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1 0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6-13.3 0-24-10.7-24-24v-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1 0-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7.2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24v112c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0-64 0 32 32 0 1 0 64 0z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.1 52.4 442.6 6.5c-1.9-3.9-6.1-6.5-10.5-6.5s-8.5 2.6-10.4 6.5l-16.5 45.9-46 16.8c-4.3 1.6-7.3 5.9-7.2 10.4 0 4.5 3 8.7 7.2 10.2l45.7 16.8 16.8 45.8c1.5 4.4 5.8 7.5 10.4 7.5s8.9-3.1 10.4-7.5l16.5-45.8 45.7-16.8c4.2-1.5 7.2-5.7 7.2-10.2 0-4.6-3-8.9-7.2-10.4l-45.6-16.8zm-132.4 53c-12.5-12.5-32.8-12.5-45.3 0l-2.9 2.9c-22-8-45.8-12.3-70.5-12.3C93.1 96 0 189.1 0 304s93.1 208 208 208 208-93.1 208-208c0-24.7-4.3-48.5-12.2-70.5l2.9-2.9c12.5-12.5 12.5-32.8 0-45.3l-80-80zM200 192c-57.4 0-104 46.6-104 104v8c0 8.8-7.2 16-16 16s-16-7.2-16-16v-8c0-75.1 60.9-136 136-136h8c8.8 0 16 7.2 16 16s-7.2 16-16 16h-8z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 398.9c58.5-41.1 96-104.1 96-174.9C512 100.3 397.4 0 256 0S0 100.3 0 224c0 70.7 37.5 133.8 96 174.9V464c0 26.5 21.5 48 48 48h48v-48c0-8.8 7.2-16 16-16s16 7.2 16 16v48h64v-48c0-8.8 7.2-16 16-16s16 7.2 16 16v48h48c26.5 0 48-21.5 48-48v-65.1zM96 256a64 64 0 1 1 128 0 64 64 0 1 1-128 0zm256-64a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32v64h120c39.8 0 72 32.2 72 72v272c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72h120V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-32zM264 256a40 40 0 1 0-80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224h16v192H48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48h-16V224h16z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M288 0H128c-17.7 0-32 14.3-32 32s14.3 32 32 32v132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6 0 480.9 31.1 512 69.4 512h309.2c38.3 0 69.4-31.1 69.4-69.4 0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32S337.7 0 320 0h-32zm-96 196.8V64h64v132.8c0 23.7 6.6 46.9 19 67.1l34.5 56.1h-171l34.5-56.1c12.4-20.2 19-43.4 19-67.1z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64h-64c-35.3 0-64-28.7-64-64V216z"/></svg>');}</style>
+
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m1 5h-2v4H7v2h4v4h2v-4h4v-2h-4V7Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="dark" data-md-color-primary="blue-grey" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#client-settings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="A.V.A.T.A.R" class="md-header__button md-logo" aria-label="A.V.A.T.A.R" data-md-component="logo">
+      
+  <img src="../img/Avatar.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            A.V.A.T.A.R
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Client settings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="dark" data-md-color-primary="blue-grey" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4m0-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  Installation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../getting-started/" class="md-tabs__link">
+          
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../developer-guide/" class="md-tabs__link">
+          
+  
+  Developer Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../about/" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="A.V.A.T.A.R" class="md-nav__button md-logo" aria-label="A.V.A.T.A.R" data-md-component="logo">
+      
+  <img src="../img/Avatar.png" alt="logo">
+
+    </a>
+    A.V.A.T.A.R
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server-install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installing a client
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installing a client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTPS certificate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server-properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Client settings
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Client settings
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-all-informations-in-the-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show all informations in the console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-search-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server search range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-communication-port-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server communication port (HTTP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-search-port-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server search port (UDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delay-between-server-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delay between server searches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-communication-port-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client communication port (HTTP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-communication-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client communication route
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-automatic-client-restarts-per-24h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of automatic client restarts per 24h
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-saver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen saver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dialog-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dialog tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dialog-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice-regognition-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice regognition module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trigger keywords
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#word-separators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Word separators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-listening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restart listening
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dialogue-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialogue redirection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-dialog-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic dialog stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-before-and-after-each-speak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time before and after each speak
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voices-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voices Tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voices Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voice-preference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice preference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current voice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-voices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected voices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-voices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available voices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-sentence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test sentence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change voice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules tab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interface tab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intercom-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intercom tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intercom tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silence-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silence time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silence-level-to-start-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silence level to start recording
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silence-level-to-stop-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silence level to stop recording
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recording driver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recording device
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background tab
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voice-rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voice rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin-rules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugin rules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin-studio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugin Studio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Developer Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-create-plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create a plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-plugin-folders-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folders and files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-nlp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Natural Language Processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-intention/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The intent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-action/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L'action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-script/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le script
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-packager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server-API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Créer un plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meteo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Créer un widget bouton (Part 1)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meteo-widget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Créer une fenêtre (Part 2)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meteo-widget-client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transférer le plugin vers un client (Part 3)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-all-informations-in-the-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show all informations in the console
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-search-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server search range
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-communication-port-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server communication port (HTTP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-search-port-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server search port (UDP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delay-between-server-searches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delay between server searches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-communication-port-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client communication port (HTTP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-communication-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client communication route
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-of-automatic-client-restarts-per-24h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of automatic client restarts per 24h
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-saver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen saver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dialog-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dialog tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dialog-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialog language
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice-regognition-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice regognition module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-keywords" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trigger keywords
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#word-separators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Word separators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-listening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restart listening
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dialogue-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dialogue redirection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatic-dialog-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automatic dialog stop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-before-and-after-each-speak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time before and after each speak
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voices-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voices Tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voices Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voice-preference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice preference
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current voice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-voices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selected voices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-voices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available voices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-sentence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test sentence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voice-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voice settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-voice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change voice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules tab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interface tab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intercom-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intercom tab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Intercom tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-of-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silence-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silence time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silence-level-to-start-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silence level to start recording
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silence-level-to-stop-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      Silence level to stop recording
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recording driver
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recording device
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Background tab
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="client-settings">Client settings</h1>
+<p>Client settings are accessed via its name in the application interface.</p>
+<p><img alt="" src="../img/client-menu.png" width="250" /></p>
+<ol>
+<li>
+<p>Left-click on the client's name to display its contextual menu</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Left-click is deliberate for compatibility with graphic tablets without keyboard </p>
+</div>
+</li>
+<li>
+<p>Click on <em>Settings</em></p>
+</li>
+</ol>
+<p><strong>NOTE:</strong> All the parameters below are described in the order in which they appear in the window.    </p>
+<h2 id="settings-tab">Settings tab</h2>
+<p><img alt="" src="../img/client-properties.png" width="400" /></p>
+<h3 id="show-all-informations-in-the-console"><code>Show all informations in the console</code></h3>
+<p>Select whether you want all information to be displayed in the console.<br />
+This can be very useful if you want to know whether or not a plugin loads correctly on startup.</p>
+<h3 id="application-language"><code>Application language</code></h3>
+<p>Defines the language used for all graphical interfaces and application messages in the console.</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>The language used for speech rules is defined in the <code>Dialog</code> tab.</p>
+</details>
+<p>2 langages sont proposés avec l'application :</p>
+<p>2 languages are offered by default with the application:</p>
+<ul>
+<li>English</li>
+<li>French</li>
+<li>
+<p>+ By default</p>
+<ul>
+<li>The system's current language</li>
+</ul>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>Setting <code>By default</code> assumes that the localization file for the current language exists </p>
+</details>
+</li>
+</ul>
+<p>You can translate a localization file into the language of your choice and add it to the application's languages: </p>
+<ol>
+<li>Copy one of the localization files to <em>app/locales/</em>, naming it with the country code (2 letters)</li>
+<li>
+<p>Modify the values of all keys</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>The $$ characters are replaced by dynamic values when the message is displayed. Do not delete them.  </p>
+</details>
+</li>
+<li>
+<p>Add an entry in <em>app/locales/BCP47.loc</em> to show the new language in the properties and use it.</p>
+<ul>
+<li>For example, suppose a new location file <em>pt.loc</em> is created</li>
+<li>The new entry in the file will be:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;English (US English)&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fr&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;French (especially in France)&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pt&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Portuguese (Portugal)&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</li>
+</ol>
+<h3 id="client-name"><code>Client name</code></h3>
+<p>The client name. </p>
+<h3 id="server-search-range"><code>Server search range</code></h3>
+<p>The server's UDP search range.<br />
+You can enter a search range in the form:</p>
+<ul>
+<li>XXX.XXX.XXX.XXX-XXX</li>
+<li>For example: for <em>192.168.2.100-110</em>, the client will look for the server in address 192.168.2.100 to 110.</li>
+</ul>
+<p>You can also enter the server address directly</p>
+<ul>
+<li>For example: 192.168.2.100</li>
+</ul>
+<h3 id="server-communication-port-http"><code>Server communication port (HTTP)</code></h3>
+<p>The communication port with the A.V.A.T.A.R. server.</p>
+<details class="warning">
+<summary>Warning</summary>
+<p>This HTTP port number must be the same on the server and each client </p>
+</details>
+<h3 id="server-search-port-udp"><code>Server search port (UDP)</code></h3>
+<p>The UDP port to search for the server.</p>
+<ul>
+<li>Default value: 3333</li>
+</ul>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>This UDP port number must be the same on the server and each client</p>
+</details>
+<h3 id="delay-between-server-searches"><code>Delay between server searches</code></h3>
+<p>Time in seconds between each network scan to find the server in the specified search range.</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>If the server can't be found, for example if a wrong address range has been set, you'll need to modify the property manually:</p>
+<ol>
+<li>Open the file <em>app/core/Avatar.prop</em> in a text editor</li>
+<li>Find the <code>target</code> property and change its value</li>
+<li>Save the file and restart the client</li>
+</ol>
+</details>
+<h3 id="client-communication-port-http"><code>Client communication port (HTTP)</code></h3>
+<p>The communication port with the A.V.A.T.A.R. server.  </p>
+<h3 id="client-communication-route"><code>Client communication route</code></h3>
+<p>The port used to access client plugins via HTTP requests (see <a href="../client-API/#http-request">HTTP request</a> in the <a href="../client-API/">Client API</a> for more details).</p>
+<h3 id="number-of-automatic-client-restarts-per-24h"><code>Number of automatic client restarts per 24h</code></h3>
+<ul>
+<li>Default value: 0 (no restart)</li>
+</ul>
+<p>To refresh the server by restarting it regularly, you can enter a value between 1 and 24. </p>
+<details class="tip" open="open">
+<summary>To know</summary>
+<p>In order not to interfere with automatic programs that may be launched at fixed times, 7 minutes are added to the selected times.</p>
+</details>
+<h3 id="screen-saver">Screen saver</h3>
+<p>Activates a screen saver after the server has been fully loaded.<br />
+Useful, for example, if you use A.V.A.T.A.R. in tablet mode to automatically switch off the screen.</p>
+<p><code>Windows</code> : Black screen by default. No screensaver file required.</p>
+<ul>
+<li>If you want to use a specific screensaver:<ul>
+<li>Rename <em>app/lib/screensaver/win32/screensaver.bat</em> to <em>app/lib/screensaver/win32/noscreensaver.bat</em>. The application will then automatically use the <em>app/lib/screensaver/win32/screensaver.vbs</em> file</li>
+<li>Then select a screensaver to be passed as a parameter<ul>
+<li>Select <em>C:\Windows\System32\scrnsave.scr</em> to have a black screen</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><code>Linux</code> - <code>macOS</code> : Black screen by default. No screensaver file required.</p>
+<ul>
+<li>If you want to use a specific screensaver, edit the <em>app/lib/screensaver/&lt;platform&gt;/screensaver.sh</em> file</li>
+<li>Then select a screensaver to be passed as a parameter</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<p>Choose whether you want the application to check for updates on startup.<br />
+If Yes, and if a new version of the application is available, the flashing message “New version available!” will be displayed in the interface.</p>
+<h2 id="dialog-tab">Dialog tab</h2>
+<p><img alt="" src="../img/client-dialog-properties.png" width="450" /></p>
+<p>In this tab, you can define the properties of voice rules</p>
+<h3 id="dialog-language"><code>Dialog language</code></h3>
+<p>Select the language used for voice rules.</p>
+<details class="info">
+<summary>Info</summary>
+<p>The languages displayed are defined in the <em>app/locales/BCP47-dialog.loc</em> file.</p>
+</details>
+<h3 id="voice-regognition-module"><code>Voice regognition module</code></h3>
+<p>This parameter defines the folder where the speech recognition module is located.</p>
+<div class="highlight"><pre><span></span><code>app /
+    core /
+        chrome /
+</code></pre></div>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>The client's speech recognition uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Web Speech API</a> interface, which can be accessed by all browsers. As a result, a client embades a version of Google Chrome when it is installed to ensure perfect compatibility with the client's version at all times.</p>
+<p>It is possible to develop another speech recognition module based on another application.<br />
+For more details, leave a message on the application's github.</p>
+</details>
+<h3 id="trigger-keywords"><code>Trigger keywords</code></h3>
+<p>List of keywords that trigger listening.</p>
+<h3 id="word-separators"><code>Word separators</code></h3>
+<p>Several actions can be defined in the same rule.<br />
+When A.V.A.T.A.R finds one of these selectors in a sentence, it will divide the sentence into as many actions and execute them one after the other.</p>
+<p>For example:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Separator</th>
+<th style="text-align: left;">Sentence</th>
+<th style="text-align: left;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">and<br>then</td>
+<td style="text-align: left;">stop the music<br><br><br>stop the music and turn on the TV<br><br><br>stop the music and turn on the TV, then put on the 1st channel</td>
+<td style="text-align: left;">1. stop the music<br><br><br>1. stop the music<br>2. allume la télé<br><br>1. stop the music<br>2. turn on the TV<br>3. put on the 1st channel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="restart-listening"><code>Restart listening</code></h3>
+<p>The list of sentences that can be said when a problem has blocked listening in order to restart it.</p>
+<h3 id="dialogue-redirection"><code>Dialogue redirection</code></h3>
+<p>A plugin can be used to redirect dialogs to speakers other than those on the client PCs.</p>
+<p>For example, to <a href="https://www.sonos.com/">Sonos</a> speakers for which a <a href="https://github.com/Spikharpax/Avatar-Plugin-SonosPlayer">SonosPlayer</a> plugin exists.  </p>
+<p>If the dialog is redirected, the voice is selected in the redirection plugin. The current voice and the voice list are no longer used.</p>
+<p>For this example, the parameter will be:</p>
+<p><img alt="" src="../img/client-sonos-dialog.png" width="400" /></p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>This setting is client-specific.<br />
+One client may have its dialogs redirected to a dedicated speaker, while another uses the speaker on its PC.</p>
+</details>
+<h3 id="loop-mode"><code>Loop mode</code></h3>
+<p>Select whether you want the dialog to loop after each dialog.  </p>
+<p>Take the following example:<br />
+<span style="color:green;">You:</span> Jarvis (<em>trigger keyword</em>)<br />
+<span style="color:orange;">A.V.A.T.A.R:</span> I'm listening<br />
+<span style="color:green;">You:</span> stop the music<br />
+<span style="color:orange;">A.V.A.T.A.R:</span> It's done<br />
+<span style="color:orange;">A.V.A.T.A.R:</span> Do you need anything else? (<em>loop mode answer</em>)<br />
+<span style="color:green;">You:</span> turn on the TV   <br />
+<span style="color:orange;">A.V.A.T.A.R:</span> It's done<br />
+<span style="color:orange;">A.V.A.T.A.R:</span> anything else? (<em>loop mode answer</em>)<br />
+etc...<br />
+etc...<br />
+<span style="color:orange;">A.V.A.T.A.R:</span> Do you need anything else? (<em>loop mode answer</em>)<br />
+<span style="color:green;">You:</span> that's it thanks (<em>terminates loop mode</em>)<br />
+<span style="color:orange;">A.V.A.T.A.R:</span> At your service (<em>end of dialogue in loop mode</em>)  </p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p>Loop mode is only effective when a dialog is opened by the trigger keyword alone, without a rule.<br />
+Loop mode is compatible with <a href="./#word-separators">word separators</a>.</p>
+<p>Key phrases are defined in the <a href="#rules-tab">Rules</a> tab.</p>
+</details>
+<h3 id="automatic-dialog-stop"><code>Automatic dialog stop</code></h3>
+<p>Enter a value in seconds to have the dialog automatically interrupted if no sentence is spoken when listening is triggered.</p>
+<h3 id="time-before-and-after-each-speak"><code>Time before and after each speak</code></h3>
+<p>Enter a value in seconds to leave a delay before and after an A.V.A.T.A.R. response, for example if you find a synchronization problem.</p>
+<h2 id="voices-tab">Voices Tab</h2>
+<p><img alt="" src="../img/client-voices-properties.png" width="350" /></p>
+<h3 id="voice-preference"><code>Voice preference</code></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Local voices</label><label for="__tabbed_1_2">Remote voices</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Displays system voices in the list of <a href="./#available-voices">available voices</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">About Linux</p>
+<p>No system voices are available for Linux.<br />
+Selecting local voices will display the <code>espeak</code> and <code>mbrola</code> voices.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Displays Google Chrome's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Web Speech API</a> voices in the <a href="./#available-voices">available voices</a> list.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Platform</th>
+<th style="text-align: center;">Disponible</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Windows</td>
+<td style="text-align: center;"><img alt="ok" src="../img/ok.png" width="12" /></td>
+<td style="text-align: left;">Male and female voices available</td>
+</tr>
+<tr>
+<td style="text-align: left;">Linux</td>
+<td style="text-align: center;"><img alt="ko" src="../img/ko.png" width="12" /></td>
+<td style="text-align: left;">No voice available</td>
+</tr>
+<tr>
+<td style="text-align: left;">MacOS</td>
+<td style="text-align: center;"><img alt="ko" src="../img/ko.png" width="12" /></td>
+<td style="text-align: left;">No voice available</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h3 id="current-voice"><code>Current voice</code></h3>
+<p>The current voice used for dialogues</p>
+<h3 id="selected-voices"><code>Selected voices</code></h3>
+<p>Voices selected and used by the <a href="./#change-voice">change voice</a> rule.  </p>
+<h3 id="available-voices"><code>Available voices</code></h3>
+<p>Displays system or remote voices, depending on the voice preference selected.</p>
+<ul>
+<li><code>Select button</code> : <ul>
+<li>Adds the voice to the list of selected voices</li>
+</ul>
+</li>
+<li><code>Bouton Define current</code> : <ul>
+<li>Adds the voice to the list of selected voices and sets it as current</li>
+</ul>
+</li>
+</ul>
+<h3 id="test-sentence"><code>Test sentence</code></h3>
+<p>Enter a phrase to test the voice, then click on the <code>Test</code> button.</p>
+<h3 id="voice-settings"><code>Voice settings</code></h3>
+<ul>
+<li><code>Voice volume</code></li>
+<li><code>Voice speed</code></li>
+<li><code>Voice pitch</code>: <ul>
+<li>The tone of voice</li>
+<li><strong>NOTE:</strong> For remote voices only</li>
+</ul>
+</li>
+</ul>
+<h3 id="change-voice"><code>Change voice</code></h3>
+<p>Enter a rule that will be used to change voices.<br />
+Voices in the <a href="./#available-voices">available voices</a> list will be selected one after the other each time a voice is changed.</p>
+<h2 id="rules-tab">Rules tab</h2>
+<p><img alt="" src="../img/client-rules-properties.png" width="350" /></p>
+<p>The <code>Rules</code> tab is divided into 2 parts:</p>
+<ul>
+<li>The 1st section at the top, the phrases you can say:<ul>
+<li>To end the <a href="./#loop-mode">loop mode</a></li>
+<li>To end the dialog if it is triggered without a prompt (e.g. a false positive)</li>
+</ul>
+</li>
+<li>The 2nd section below shows what the customer responds to:<ul>
+<li>When the dialog is triggered by the keyword</li>
+<li>When the dialog loops in <a href="./#loop-mode">loop mode</a></li>
+<li>when the client doesn't understand your answer during an askme (question/answer)</li>
+<li>When you end the dialog in <a href="./#loop-mode">loop mode</a></li>
+<li>When you end the dialog without prompting (e.g. a false positive)</li>
+</ul>
+</li>
+</ul>
+<h2 id="interface-tab">Interface tab</h2>
+<p><img alt="" src="../img/client-interface-properties.png" width="350" /></p>
+<p>Customer interface management properties are grouped by type: </p>
+<ul>
+<li>Client name properties</li>
+<li>Console properties</li>
+<li>Visualizer properties</li>
+</ul>
+<h2 id="intercom-tab">Intercom tab</h2>
+<p><img alt="" src="../img/client-intercom-properties.png" width="350" /></p>
+<h3 id="list-of-rules"><code>List of rules</code></h3>
+<p>In order, the 4 lists of rules group together the sentences that can be said to trigger the intercom:</p>
+<ul>
+<li>Rules for intercom with one client</li>
+<li>Rules for intercom with all clients</li>
+<li>The sentence the client says to indicate that the recording is starting </li>
+<li>The sentence the client says to indicate that the message has been sent to client(s)</li>
+</ul>
+<h3 id="silence-time"><code>Silence time</code></h3>
+<p>Silence time in seconds for recording to stop and client to send message to client(s).</p>
+<h3 id="silence-level-to-start-recording"><code>Silence level to start recording</code></h3>
+<p>The lower the level, the higher the noise.</p>
+<h3 id="silence-level-to-stop-recording"><code>Silence level to stop recording</code></h3>
+<p>The lower the level, the higher the noise.</p>
+<h3 id="recording-driver"><code>Recording driver</code></h3>
+<p>waveaudio<code>is normally the driver used to generate the</code>.wav` file.<br />
+If you wish, you can modify this driver for another type of recording.</p>
+<h3 id="recording-device"><code>Recording device</code></h3>
+<p><code>default</code> is normally the device used for registration.<br />
+If you wish, you can change this device.</p>
+<h3 id="debug-mode"><code>Debug mode</code></h3>
+<p>If you notice a problem, you can view more information in the client console.</p>
+<h2 id="background-tab">Background tab</h2>
+<p><img alt="" src="../img/background-properties.png" width="350" /></p>
+<p>Choose a wallpaper in <code>jpg</code> format for the client graphical interface.</p>
+<p>By default, the application offers a number of wallpapers in the <em>app/assets/images/background</em> folder.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can choose a wallpaper from any folder.<br />
+When saved, it will be copied to the <em>app/assets/images/background</em> folder.</p>
+</div>
+<p><br><br>
+<a class="md-button" href="../server-properties/" style="float:left;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 18V6h2v12H6m3.5-6L18 6v12l-8.5-6Z"/></svg></span> Server settings</a><br />
+<br><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com" target="_blank" rel="noopener">A.V.A.T.A.R</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+    
+  </body>
+</html>
