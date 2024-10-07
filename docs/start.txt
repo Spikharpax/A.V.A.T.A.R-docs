@@ -1,0 +1,19 @@
+C:\Avatar-dev\mkdocs\Avatar-Server>
+
+python -m mkdocs serve
+
+python -m mkdocs build
+
+
+pymdownx.hightlight:
+      anchor_linenums: true
+  pymdownx.inlinehilite
+  pymdownx.snippets
+  admonition : {}
+  pymdownx.arithmatex:
+    generic: true
+  footnotes
+  pymdownx.details
+  pymdownx.superfences
+  pymdownx.mark
+  attr_list

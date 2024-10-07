@@ -1,0 +1,114 @@
+site_name: A.V.A.T.A.R
+nav:
+  - Home : index.md
+  - 'Installation': 
+        - 'Introduction': introduction.md
+        - 'Server installation': server-install.md
+        - 'Installing a client': 
+          - 'Client installation': client-install.md
+          - 'HTTPS certificate': certificate.md
+  - 'Getting started':
+        - 'Getting started': getting-started.md
+        - 'Settings':
+          - server-properties.md
+          - client-properties.md
+        - 'Concepts':
+          - 'Voice rules': voice-rules.md
+          - 'Plugin rules': plugin-rules.md
+          - 'Virtual client': virtual-client.md
+        - 'Tools':
+          - 'Plugin Studio': plugin-studio.md
+  - 'Developer Guide': 
+        - 'Introduction': developer-guide.md
+        - 'Tutorial':
+          - tutorial-prerequisites.md
+          - tutorial-create-plugin.md
+          - tutorial-plugin-folders-files.md
+          - tutorial-nlp.md
+          - tutorial-intention.md
+          - tutorial-action.md
+          - tutorial-script.md
+          - tutorial-packager.md
+        - 'API': 
+          - 'Server': server-API.md
+          - 'Client': client-API.md
+        - 'Examples': 
+          - 'Introduction': developer-examples.md
+          - 'Créer un plugin': time.md
+          - 'Créer un widget bouton (Part 1)': meteo.md
+          - 'Créer une fenêtre (Part 2)': meteo-widget.md
+          - 'Transférer le plugin vers un client (Part 3)': meteo-widget-client.md
+  - About: about.md
+theme:
+  logo: img/Avatar.png
+  name: material
+  hljs_languages:
+    - yaml
+    - rust
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotation
+    - content.code.copy
+    - content.tooltips
+  icon:
+    annotation: material/plus-circle-outline
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+  language: en
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: dark
+      toggle:
+        icon: material/toggle-switch-outline
+        name: Switch to dark mode
+      primary: blue grey
+      accent: purple
+      
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: 
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: blue grey
+      accent: lime
+markdown_extensions:
+  - pymdownx.blocks.admonition
+  - pymdownx.blocks.details
+  - pymdownx.blocks.definition
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - abbr
+  - pymdownx.snippets
+  - pymdownx.keys
+extra_css:
+  - stylesheets/extra.css 
+copyright: |
+  &copy; 2024 <a href="https://github.com" target="_blank" rel="noopener">A.V.A.T.A.R</a>
+
